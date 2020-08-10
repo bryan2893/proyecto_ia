@@ -44,7 +44,7 @@ def recognize_fruit():
         Devuelve la información de la fruta
     '''
     base64_string = request.data
-    image = Image.open(BytesIO(base64.b64decode(base64_string[22:])))
+    image = Image.open(BytesIO(base64.b64decode(base64_string)))
     predictions = fruits_recognizer.recognize(image)
     return jsonify(predictions)
 
