@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento de emociones</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="video-container">
+        <ul class="emotion-results">
+            <li id="main-emotion"></li>
+            <li id="anger"></li>
+            <li id="fear"></li>
+            <li id="happiness"></li>
+            <li id="sadness"></li>
+            <li id="surprise"></li>
+            <li id="neutral"></li>
+        </ul>
+    
+        <canvas id="canvas"></canvas>
+        <video autoplay id="video"></video>
+    </div>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+</body>
+</html>
